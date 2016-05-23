@@ -243,7 +243,9 @@ I sent with the project a very nice postman collection, that's help so much to t
 }
 ```
 
+---
 ### Game info endpoint
+---
 
 **Description:** This endpoint make a guess
 
@@ -334,7 +336,9 @@ I sent with the project a very nice postman collection, that's help so much to t
 }
 ```
 
+---
 ### Get the user turn endpoint
+---
 
 **Description:** This endpoint get whose is the user turn
 
@@ -413,7 +417,9 @@ I sent with the project a very nice postman collection, that's help so much to t
 ]
 ```
 
+---
 ### Get the history of a specific game by user
+---
 
 **Description:** This endpoint get the history of the guesses for a specific game by user
 
