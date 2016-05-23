@@ -1,3 +1,5 @@
+MastermindAPI
+
 Used these technologies:
 Java 8
 Maven 3
