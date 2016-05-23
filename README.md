@@ -35,7 +35,7 @@ I sent with the project a very nice postman collection, that's help so much to t
 **Request Param:** PathParam=user
 
 **Response example:**
-```{
+```json{
   "pins": [
     {
       "color": "GREEN",
