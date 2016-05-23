@@ -111,33 +111,37 @@ I sent with the project a very nice postman collection, that's help so much to t
   },
   "timeGameStarted": null,
   "timeGameFinished": null
-}``` 
+}
+```
 
 ### Join in a new game endpoint
 
-#### Description: This endpoint join some user a new Mastermind game created before.
+**Description**: This endpoint join some user a new Mastermind game created before.
 
-#### URL Example: https://azmastermind-api.herokuapp.com/api/join
+**URL Example:** https://azmastermind-api.herokuapp.com/api/join
 
-#### Body:```{
+**Body:**
+```json{
   "user": "geiser",
   "sessionId": "1",
   "gameKey": "e62f4a0e-0106-4258-833a-aa871908f7a6"
 }
+```
 
-#### Header: Content-Type: application/json
+**Header:** Content-Type: application/json
 
-#### HTTP Method: POST
+**HTTP Method:** POST
 
-#### Response example:geiser entered in the game with sessionId 1
+**Response example:** geiser entered in the game with sessionId 1
 
 ### Make a guess endpoint
 
-#### Description: This endpoint make a guess
+**Description:** This endpoint make a guess
 
-#### URL Example: https://azmastermind-api.herokuapp.com/api/guess
+**URL Example:** https://azmastermind-api.herokuapp.com/api/guess
 
-#### Body:```{
+**Body:**
+```json{
   "user": "igor",
   "gameKey": "b1d30b7e-a561-43e9-a049-2ad57a1badcc",
   "pins": [
@@ -175,12 +179,14 @@ I sent with the project a very nice postman collection, that's help so much to t
     }
   ]
 }
+``` 
 
-#### Header: Content-Type: application/json
+**Header:** Content-Type: application/json
 
-#### HTTP Method: POST
+**HTTP Method:** POST
 
-#### Response example:{
+**Response example:**
+```json{
   "exact": 1,
   "near": 0,
   "guess": {
@@ -231,17 +237,20 @@ I sent with the project a very nice postman collection, that's help so much to t
   },
   "solved": false
 }
+```
 
 ### Game info endpoint
-#### Description: This endpoint make a guess
 
-#### URL Example: https://azmastermind-api.herokuapp.com/api/game/{gameKey}
+**Description:** This endpoint make a guess
 
-#### Header: Content-Type: application/json
+**URL Example:** https://azmastermind-api.herokuapp.com/api/game/{gameKey}
 
-#### HTTP Method: GET
+**Header:** Content-Type: application/json
 
-#### Response example:
+**HTTP Method:** GET
+
+**Response example:**
+```json
 {
   "pins": [
     {
@@ -319,29 +328,32 @@ I sent with the project a very nice postman collection, that's help so much to t
   "timeGameStarted": null,
   "timeGameFinished": null
 }
+```
 
 ### Get the user turn endpoint
-#### Description: This endpoint get whose is the user turn
 
-#### URL Example: https://azmastermind-api.herokuapp.com/api/status/cf6fa2b6-b44a-40dd-9ed8-be1dfdfbebb9
+**Description:** This endpoint get whose is the user turn
 
-#### Header: Content-Type: application/json
+**URL Example:** https://azmastermind-api.herokuapp.com/api/status/cf6fa2b6-b44a-40dd-9ed8-be1dfdfbebb9
 
-#### HTTP Method: GET
+**Header:** Content-Type: application/json
 
-#### Response example:It is time to igor make the move.
+**HTTP Method:** GET
+
+**Response example:** It is time to igor make the move.
 
 ### Get the history of a specific game
 
-#### Description: This endpoint get the history of the guesses for a specific game
+**Description:** This endpoint get the history of the guesses for a specific game
 
-#### URL Example: https://azmastermind-api.herokuapp.com/api/history/cf6fa2b6-b44a-40dd-9ed8-be1dfdfbebb9
+**URL Example:** https://azmastermind-api.herokuapp.com/api/history/cf6fa2b6-b44a-40dd-9ed8-be1dfdfbebb9
 
-#### Header: Content-Type: application/json
+**Header:** Content-Type: application/json
 
-#### HTTP Method: GET
+**HTTP Method:** GET
 
-#### Response example:
+**Response example:**
+```json
 [
   {
     "exact": 2,
@@ -395,18 +407,20 @@ I sent with the project a very nice postman collection, that's help so much to t
     "solved": false
   }
 ]
+```
 
 ### Get the history of a specific game by user
 
-#### Description: This endpoint get the history of the guesses for a specific game by user
+**Description:** This endpoint get the history of the guesses for a specific game by user
 
-#### URL Example: https://azmastermind-api.herokuapp.com/api/history/cf6fa2b6-b44a-40dd-9ed8-be1dfdfbebb9?byUser={user}
+**URL Example:** https://azmastermind-api.herokuapp.com/api/history/cf6fa2b6-b44a-40dd-9ed8-be1dfdfbebb9?byUser={user}
 
-#### Header: Content-Type: application/json
+**Header:** Content-Type: application/json
 
-#### HTTP Method: GET
+**HTTP Method:** GET
 
-#### Response example:[
+**Response example:**
+```json[
   {
     "exact": 2,
     "near": 0,
@@ -459,6 +473,7 @@ I sent with the project a very nice postman collection, that's help so much to t
     "solved": false
   }
 ]
+```
 
 ## Built With
 * Java
