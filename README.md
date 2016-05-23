@@ -26,16 +26,16 @@ I sent with the project a very nice postman collection, that's help so much to t
 
 **Description:** This endpoint creates a new Mastermind game.
 
-**URL Example: ** https://azmastermind-api.herokuapp.com/api/new_game/{user}
+**URL Example:** https://azmastermind-api.herokuapp.com/api/new_game/{user}
 
 **Header:** Content-Type: application/json
 
 **HTTP Method:** POST
 
-#### Request Param: PathParam=user
+**Request Param:** PathParam=user
 
-#### Response example:
-{
+**Response example:**
+```{
   "pins": [
     {
       "color": "GREEN",
@@ -111,9 +111,10 @@ I sent with the project a very nice postman collection, that's help so much to t
   },
   "timeGameStarted": null,
   "timeGameFinished": null
-}
+}``` 
 
 ### Join in a new game endpoint
+
 #### Description: This endpoint join some user a new Mastermind game created before.
 
 #### URL Example: https://azmastermind-api.herokuapp.com/api/join
