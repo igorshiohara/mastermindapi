@@ -1,37 +1,40 @@
-MastermindAPI
+# MastermindAPI
 
-Used these technologies:
-Java 8
-Maven 3
-Tomcat 7
-Google Guice
-Google Guava
-Jersey
-RxObservable to Asynchorous calls
-How to Run
+## Tech stack
+* Java 8
+* Maven 3
+* Tomcat 7
+* Google Guice
+* Google Guava
+* Jersey
+* RxObservable to Asynchorous calls
+
+## How to Run
 If you use maven, just execute mvn tomcat7:run or Deploy the mastermind-api.war file on Tomcat 7
 
 We've used in memory implementation (cache), so it is not necessary to configure nothing.
 
-Things that I tried, but dind't have time to complete :(: -> Swagger UI to documentation (almost done in a branch)
-
--> Create more unit tests and integration tests with RestAssured
+## Things that I tried, but dind't have time to complete
+1. Swagger UI to documentation (almost done in a branch)
+2.  Create more unit tests and integration tests with RestAssured
 
 I sent with the project a very nice postman collection, that's help so much to test the API and understand better.
 
-Api documentation
-Create a new game endpoint
-Description: This endpoint creates a new Mastermind game.
+## Api documentation
 
-URL Example: https://azmastermind-api.herokuapp.com/api/new_game/{user}
+### Create a new game endpoint
 
-Header: Content-Type: application/json
+**Description:** This endpoint creates a new Mastermind game.
 
-HTTP Method: POST
+**URL Example: ** https://azmastermind-api.herokuapp.com/api/new_game/{user}
 
-Request Param: PathParam=user
+**Header:** Content-Type: application/json
 
-Response example:
+**HTTP Method:** POST
+
+#### Request Param: PathParam=user
+
+#### Response example:
 {
   "pins": [
     {
@@ -110,29 +113,30 @@ Response example:
   "timeGameFinished": null
 }
 
-Join in a new game endpoint
-Description: This endpoint join some user a new Mastermind game created before.
+### Join in a new game endpoint
+#### Description: This endpoint join some user a new Mastermind game created before.
 
-URL Example: https://azmastermind-api.herokuapp.com/api/join
+#### URL Example: https://azmastermind-api.herokuapp.com/api/join
 
-Body:```{
+#### Body:```{
   "user": "geiser",
   "sessionId": "1",
   "gameKey": "e62f4a0e-0106-4258-833a-aa871908f7a6"
 }
 
-Header: Content-Type: application/json
+#### Header: Content-Type: application/json
 
-HTTP Method: POST
+#### HTTP Method: POST
 
-Response example:geiser entered in the game with sessionId 1
+#### Response example:geiser entered in the game with sessionId 1
 
-Make a guess endpoint
-Description: This endpoint make a guess
+### Make a guess endpoint
 
-URL Example: https://azmastermind-api.herokuapp.com/api/guess
+#### Description: This endpoint make a guess
 
-Body:```{
+#### URL Example: https://azmastermind-api.herokuapp.com/api/guess
+
+#### Body:```{
   "user": "igor",
   "gameKey": "b1d30b7e-a561-43e9-a049-2ad57a1badcc",
   "pins": [
@@ -171,11 +175,11 @@ Body:```{
   ]
 }
 
-Header: Content-Type: application/json
+#### Header: Content-Type: application/json
 
-HTTP Method: POST
+#### HTTP Method: POST
 
-Response example:{
+#### Response example:{
   "exact": 1,
   "near": 0,
   "guess": {
@@ -227,16 +231,16 @@ Response example:{
   "solved": false
 }
 
-Game info endpoint
-Description: This endpoint make a guess
+### Game info endpoint
+#### Description: This endpoint make a guess
 
-URL Example: https://azmastermind-api.herokuapp.com/api/game/{gameKey}
+#### URL Example: https://azmastermind-api.herokuapp.com/api/game/{gameKey}
 
-Header: Content-Type: application/json
+#### Header: Content-Type: application/json
 
-HTTP Method: GET
+#### HTTP Method: GET
 
-Response example:
+#### Response example:
 {
   "pins": [
     {
@@ -315,27 +319,28 @@ Response example:
   "timeGameFinished": null
 }
 
-Get the user turn endpoint
-Description: This endpoint get whose is the user turn
+### Get the user turn endpoint
+#### Description: This endpoint get whose is the user turn
 
-URL Example: https://azmastermind-api.herokuapp.com/api/status/cf6fa2b6-b44a-40dd-9ed8-be1dfdfbebb9
+#### URL Example: https://azmastermind-api.herokuapp.com/api/status/cf6fa2b6-b44a-40dd-9ed8-be1dfdfbebb9
 
-Header: Content-Type: application/json
+#### Header: Content-Type: application/json
 
-HTTP Method: GET
+#### HTTP Method: GET
 
-Response example:It is time to igor make the move.
+#### Response example:It is time to igor make the move.
 
-Get the history of a specific game
-Description: This endpoint get the history of the guesses for a specific game
+### Get the history of a specific game
 
-URL Example: https://azmastermind-api.herokuapp.com/api/history/cf6fa2b6-b44a-40dd-9ed8-be1dfdfbebb9
+#### Description: This endpoint get the history of the guesses for a specific game
 
-Header: Content-Type: application/json
+#### URL Example: https://azmastermind-api.herokuapp.com/api/history/cf6fa2b6-b44a-40dd-9ed8-be1dfdfbebb9
 
-HTTP Method: GET
+#### Header: Content-Type: application/json
 
-Response example:
+#### HTTP Method: GET
+
+#### Response example:
 [
   {
     "exact": 2,
@@ -390,16 +395,17 @@ Response example:
   }
 ]
 
-Get the history of a specific game by user
-Description: This endpoint get the history of the guesses for a specific game by user
+### Get the history of a specific game by user
 
-URL Example: https://azmastermind-api.herokuapp.com/api/history/cf6fa2b6-b44a-40dd-9ed8-be1dfdfbebb9?byUser={user}
+#### Description: This endpoint get the history of the guesses for a specific game by user
 
-Header: Content-Type: application/json
+#### URL Example: https://azmastermind-api.herokuapp.com/api/history/cf6fa2b6-b44a-40dd-9ed8-be1dfdfbebb9?byUser={user}
 
-HTTP Method: GET
+#### Header: Content-Type: application/json
 
-Response example:[
+#### HTTP Method: GET
+
+#### Response example:[
   {
     "exact": 2,
     "near": 0,
@@ -452,13 +458,15 @@ Response example:[
     "solved": false
   }
 ]
-Built With
-java
-maven
-tomcat
-jersey
-guava
-guice
-rx
-Try it out
+
+## Built With
+* Java
+* Maven
+* Tomcat
+* Jersey
+* Guava
+* Guice
+* Reactive (RxJava)
+
+## Try it out
  azmastermind-api.herokuapp.com
