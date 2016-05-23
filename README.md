@@ -22,7 +22,9 @@ I sent with the project a very nice postman collection, that's help so much to t
 
 ## Api documentation
 
+---
 ### Create a new game endpoint
+---
 
 **Description:** This endpoint creates a new Mastermind game.
 
@@ -114,7 +116,9 @@ I sent with the project a very nice postman collection, that's help so much to t
 }
 ```
 
+---
 ### Join in a new game endpoint
+---
 
 **Description**: This endpoint join some user a new Mastermind game created before.
 
