@@ -138,7 +138,9 @@ I sent with the project a very nice postman collection, that's help so much to t
 
 **Response example:** geiser entered in the game with sessionId 1
 
+---
 ### Make a guess endpoint
+---
 
 **Description:** This endpoint make a guess
 
@@ -486,15 +488,6 @@ I sent with the project a very nice postman collection, that's help so much to t
   }
 ]
 ```
-
-## Built With
-* Java
-* Maven
-* Tomcat
-* Jersey
-* Guava
-* Guice
-* Reactive (RxJava)
 
 ## Try it out
  azmastermind-api.herokuapp.com
