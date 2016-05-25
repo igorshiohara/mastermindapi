@@ -14,9 +14,8 @@ If you use maven, just execute mvn tomcat7:run or Deploy the mastermind-api.war 
 
 We've used in memory implementation (cache), so it is not necessary to configure nothing.
 
-## Things that I tried, but dind't have time get thto complete
+## In the future
 1. Swagger UI to documentation (almost done in a branch)
-2.  Create more unit tests and integration tests with RestAssured
 
 I sent with the project a very nice postman collection, that's help so much to test the API and understand better.
 
