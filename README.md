@@ -17,8 +17,6 @@ We've used in memory implementation (cache), so it is not necessary to configure
 ## In the future
 1. Swagger UI to documentation (almost done in a branch)
 
-I sent with the project a very nice postman collection, that's help so much to test the API and understand better.
-
 ## Api documentation
 
 ---
